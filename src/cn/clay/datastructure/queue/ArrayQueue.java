@@ -2,6 +2,9 @@ package cn.clay.datastructure.queue;
 
 /**
  * 使用数组模拟队列
+ * @author: clay
+ * @date: 2021/07/03  15:32
+ * @description:
  */
 public class ArrayQueue {
 
