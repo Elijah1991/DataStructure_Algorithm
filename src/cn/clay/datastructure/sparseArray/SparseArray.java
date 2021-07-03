@@ -41,11 +41,13 @@ public class SparseArray {
      * 获取二维数组中的有效元素个数(除0以外的值)
      */
     public static int getEffectiveEleCount(int[][] arr){
-        int sum=0;// 记录不为0的元素的个数
+        // 记录不为0的元素的个数
+        int sum=0;
         //遍历二维数组
         for (int[] row : arr) {
             for (int data : row) {
-                if (data!=0) {//不为0就sum自增1
+                //不为0就sum自增1
+                if (data!=0) {
                     sum++;
                 }
             }
@@ -94,9 +96,12 @@ public class SparseArray {
                 // 只存不为0的元素值
                 if (arr[i][j]!=0){
                     count++;
-                    sparseArr[count][0]=i;// 原二维数组对应的元素所在的行
-                    sparseArr[count][1]=j;// 原二维数组对应的元素所在的列
-                    sparseArr[count][2]=arr[i][j];// 存元素值
+                    // 原二维数组对应的元素所在的行
+                    sparseArr[count][0]=i;
+                    // 原二维数组对应的元素所在的列
+                    sparseArr[count][1]=j;
+                    // 存元素值
+                    sparseArr[count][2]=arr[i][j];
                 }
             }
         }
@@ -113,7 +118,8 @@ public class SparseArray {
                 for(int j=0;j<sparseArr[i].length;j++){
                     fw.write(sparseArr[i][j]+"\t");
                 }
-                fw.write("\r\n");//写完一行就换行
+                //写完一行就换行
+                fw.write("\r\n");
             }
             fw.close();
         } catch (IOException e) {
